@@ -1,0 +1,29 @@
+motor_port: /dev/ttyUSB4
+video_port: /dev/ttyUSB0
+use_fingertip_camera: true
+use_third_view_camera: true
+third_view_serial_number: ""  # Fill in the serial number for this camera.
+
+joint_command_order_list: 
+  [
+    "IS",
+    "IF",
+    "IP",
+    "ID",
+    "MS",
+    "MF",
+    "MP",
+    "MD",
+    "RS",
+    "RF",
+    "RP",
+    "RD",
+    "LS",
+    "LF",
+    "LP",
+    "LD",
+    "TS",
+    "TF",
+    "TP",
+    "TD",
+  ]

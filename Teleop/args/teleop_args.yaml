@@ -1,0 +1,24 @@
+robot_arm: UR5e
+robot_ip: ""  # Fill in the UR5e IP address before running the robot.
+robot_hand: Rapid
+
+input_type: visionpro
+user: example_user
+joint_command_topic: /teleoperation/joint_angles
+
+publish_config:
+  publish_robot_data: false
+  robot_data_topic:
+    joint_topic: /robot2/joint_states
+    rgb_image_topic: /camera_image
+
+save_config:
+  save_robot_data: true
+  save_robot_data_zarr: true
+  root_dir: ./data
+  task_dir: test_data
+
+# Display configuration
+display_config:
+  enable_fingertip_camera: true  # Enable/disable fingertip camera display window
+  enable_third_view_camera: false  # Enable/disable third view camera display

@@ -1,0 +1,19 @@
+# Evaluation arguments for policy action execution
+# num_steps: Number of action steps to execute from pred_actions (range: 1-16)
+# The code fallback is 1; this configuration selects 8 steps.
+# When num_steps=1: executes pred_actions[0]
+# When num_steps=n: executes pred_actions[0] to pred_actions[n-1] sequentially
+num_steps: 8  # Execute the first eight predicted steps.
+
+# auto_start_data_collection: If True, pressing 'c' will automatically start data collection along with policy control
+# If False, policy control and data collection remain independent (default: False)
+auto_start_data_collection: false
+
+# Display configuration
+display_config:
+  enable_fingertip_camera: true  # Enable/disable fingertip camera display window
+
+
+# checkpoint_path: Relative path to policy checkpoint (.ckpt)
+# Fill this in before evaluation, or provide the checkpoint on the CLI.
+checkpoint_path: ""  # Fill in the checkpoint path or pass it on the CLI.

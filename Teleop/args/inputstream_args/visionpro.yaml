@@ -1,0 +1,2 @@
+input_stream_type: visionpro
+avp_ip: "192.168.0.142"  # Fill in the Vision Pro IP address before teleoperation.

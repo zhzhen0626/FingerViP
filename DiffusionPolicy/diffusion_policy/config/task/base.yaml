@@ -1,0 +1,29 @@
+# Shared settings for FingerViP task variants.
+# Inherit this file from a task that defines its complete shape_meta.
+name: fingervip
+task_name: fingervip
+
+obs_down_sample_steps: 1
+low_dim_obs_horizon: 2
+img_obs_horizon: 2
+action_horizon: 16
+ignore_proprioception: False
+
+dataset_path: "" # Set an absolute dataset.zarr.zip path or override on the CLI.
+
+dataset:
+  _target_: diffusion_policy.dataset.FingerViPDataset
+  shape_meta: ${task.shape_meta}
+  dataset_path: ${task.dataset_path}
+  cache_dir: null
+  action_padding: False
+  temporally_independent_normalization: False
+  repeat_frame_prob: 0.0
+  max_duration: null
+  seed: 42
+  val_ratio: 0.05
+  random_dropout: True
+  random_dropout_prob: 0.05
+
+env_runner:
+  _target_: diffusion_policy.env_runner.real_pusht_image_runner.RealPushTImageRunner

@@ -1,0 +1,14 @@
+# Create from DiffusionPolicy/ with: conda env create -f environment.yml
+name: fingervip
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.21
+  # Avoid the defaults libffi.so.7 alias conflicting with ROS Noetic system libraries.
+  - libffi=3.4.6
+  - pip=25.2
+  - setuptools=80.9.0
+  - wheel=0.45.1
+  - pip:
+      - -r diffusion_policy/requirements.txt
